@@ -71,4 +71,4 @@ terraform apply -auto-approve
 | aws_region | AWS Region | `ap-southeast-2` | no |
 | aws_instance_size | AWS gateway instance size | `t2.micro` | no |
 | hpe | Insane mode flag | `false` | no |
-| ha_gw | Enable HA gateway | `true` | no |
+| ha_gw | Enable HA gateway | `false` | no |
