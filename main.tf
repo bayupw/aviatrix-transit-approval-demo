@@ -12,7 +12,8 @@ module "aws_transit_1" {
   instance_size         = var.aws_instance_size
   ha_gw                 = var.ha_gw
   local_as_number       = 65501
-  enable_learned_cidrs_approval = true
+  learned_cidr_approval = true
+  learned_cidrs_approval_mode = "gateway"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
