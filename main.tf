@@ -4,7 +4,7 @@
 module "aws_transit_1" {
   source                = "terraform-aviatrix-modules/mc-transit/aviatrix"
   cloud                 = "aws"
-  name                  = "transit"
+  name                  = "Transit"
   region                = var.aws_region
   cidr                  = cidrsubnet(var.cloud_supernet, 8, 255)
   account               = var.aws_account
@@ -12,7 +12,7 @@ module "aws_transit_1" {
   instance_size         = var.aws_instance_size
   ha_gw                 = var.ha_gw
   local_as_number       = 65501
-  learned_cidr_approval = true
+  enable_learned_cidrs_approval = true
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ module "aws_transit_1" {
 module "aws_spoke_1" {
   source        = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   cloud         = "AWS"
-  name          = "spoke1"
+  name          = "Spoke1"
   cidr          = cidrsubnet(var.cloud_supernet, 8, 100)
   region        = var.aws_region
   account       = var.aws_account
@@ -36,7 +36,7 @@ module "aws_spoke_1" {
 # ---------------------------------------------------------------------------------------------------------------------
 module "onprem" {
   source              = "github.com/gleyfer/aviatrix-demo-onprem-aws"
-  hostname            = "onprem"
+  hostname            = "Onprem"
   tunnel_proto        = "IPsec"
   network_cidr        = cidrsubnet(var.onprem_supernet, 8, 200)
   public_subnets      = [cidrsubnet(var.onprem_supernet, 9, 400)]
