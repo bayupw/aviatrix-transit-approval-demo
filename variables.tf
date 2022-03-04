@@ -51,3 +51,12 @@ variable "ha_gw" {
   default     = false
   description = "Enable HA gateway"
 }
+
+# ---------------------------------------------------------------------------------------------------------------------
+# AWS EC2
+# ---------------------------------------------------------------------------------------------------------------------
+variable "key_name" {
+  type        = string
+  default     = null
+  description = "Existing SSH public key name"
+}

@@ -47,6 +47,6 @@ module "onprem" {
   csr_bgp_as_num      = "65511"
   create_client       = false
   advertised_prefixes = ["0.0.0.0/0"]
-
+  key_name = var.key_name
   depends_on = [module.aws_transit_1]
 }
