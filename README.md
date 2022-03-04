@@ -11,7 +11,7 @@ Terraform code will deploy:
 
 The code provided is for demo purposes only.
 
-![Aviatrix Transit Approval Demo Topology](images/aviatrix-transit-approval-demo.png "Aviatrix Transit Approval Demo Topology")
+![Aviatrix Transit Approval Demo Topology](images/aviatrix-transit-approval-demo-diagram.png "Aviatrix Transit Approval Demo Topology")
 
 ## Prerequisites
 
